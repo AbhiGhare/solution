@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,700&display=swap');
 
+
 :root {
   --red: hsl(0, 78%, 62%);
   --cyan: hsl(180, 62%, 55%);
@@ -31,12 +32,52 @@
 nav{
     display: flex;
     justify-content: space-around;
-    background-color: #a0a0c7;
+    background-color: transparent;
+    /* background: linear-gradient(to right, #85dc85,#F9A602 ); */
+    /* animation: navbar-background 20s; */
     padding: 10px;
     margin-top: 5px;
     border-radius: 25px;
     align-items: center;
+    box-shadow: 3px 3px 14px #929292,
+    -3px -3px 14px #ffffff;
 }
+
+.contact-button{
+  border: 2px solid #ddd;
+  padding: 3px 7px;
+  border-radius: 10px;
+}
+.contact-button a:hover{
+  border: none;
+}
+
+
+/* @keyframes navbar-background {
+  0% {
+   background: linear-gradient(to right, #85dc85,#F9A602 );
+      
+  } */
+
+  /* 25% {
+      background: linear-gradient(135deg, #ffff99, #5ee95e);
+      
+  }
+
+  50% {
+      background: linear-gradient(to bottom, #98ff98, #e95ed2);
+      
+  }
+
+  100% {
+      background: linear-gradient(-135deg, #fae37d, #881da8, #20668f);
+      
+  } */
+
+/* } */
+
+
+
 nav .logo a{
     font-size: 1.5rem;
     font-weight: bold;
@@ -52,11 +93,14 @@ li{
 }
 a{
     text-decoration: none;
-    color: #fff;
+    color:black;
     font-size: 1rem;
 }
 a:hover{
-    color: orange;
+    /* color: orange; */
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 2px solid white;
 }
 nav .toggle_btn{
     color: white;
@@ -159,7 +203,9 @@ nav .toggle_btn{
 -----------------------------------------------*/
 .home-section{
     
-    background-color: #ff589e;
+    /* background-color:#FFFFFF; */
+    background: url('../images/Backgr45.jpg');
+    background-size: cover;
     padding: 99px;
 }
 .left-side{
@@ -169,28 +215,34 @@ nav .toggle_btn{
     margin-bottom: 56px;
 }
 .left-side h1{
-    color: #fff;
+    color: black;
 }
 .left-side span{
     color: orange;
+    /* border: 2px solid #fff; */
+    /* background-color: #fff; */
+    /* padding: 4px 0px; */
+    /* border-radius: 2px solid #fff ; */
     font-weight: bold;
     font-style: oblique;
     font-size: 3rem;
 }
 .left-side p{
-    color: lawngreen;
+    color: #fff;
 }
 .right-side .card{
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 50px;
     width: 100%;
-    border-bottom-left-radius: 500px;
+    background-color: transparent;
+    /* border-bottom-left-radius: 500px; */
 }
-/* .right-side .card .img{
-     background-color: blanchedalmond;
+.right-side .card .img{
+     /* background-color: blanchedalmond; */
     padding: 50px;
     border-radius: 50px; 
-} */
+    animation: float 6s ease-in-out infinite;
+}
 /* -------------------------------------------
               end home section
 -----------------------------------------------*/
@@ -253,7 +305,8 @@ Features Small Start  3 cards
   .features-small-item .features-title {
     font-weight: 500;
     font-size: 18px;
-    color: #1e1e1e;
+    color: black;
+    font-weight: 800;
     letter-spacing: 0.7px;
     margin-bottom: 15px;
     position: relative;
@@ -263,7 +316,7 @@ Features Small Start  3 cards
   .features-small-item p {
     font-weight: 400;
     font-size: 13px;
-    color: #777;
+    color: black;
     letter-spacing: 0.5px;
     line-height: 25px;
     position: relative;
@@ -320,6 +373,10 @@ Features Small Start  3 cards
     background-color: orange;
     justify-content: space-around;
     align-items: center;
+
+    /* added box shadow */
+    box-shadow: 3px 3px 15px #ffffff,
+    -5px -5px 17px transparent;
   }
   .button:hover {
     color: #fff;
@@ -344,10 +401,142 @@ Features Small Start  3 cards
   }
 
   /* about */
+  #bg-services{
+    width: auto;
+  }
+  #about{
+    padding-bottom: 150px;
+    /* background: linear-gradient(to right, #85dc85,#b03cb88f ); */
+  }
+  .about-left{
+    flex-direction: column;
+  }
+  .about-left h2{
+    text-align: center;
+  }
+  .about-left p{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .gtco-features {
+    margin-top: 100px;
+  }
+
+  /* -----> */
+
+  /* .gtco-features h2 {
+    margin-top: 50px;
+  } */
+
+  @media (max-width: 991px) {
+    .gtco-features h2 {
+      margin-top: 0;
+    }
+  }
+  .col-lg-4{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .gtco-features .col-lg-4 p {
+    max-width: 320px;
+    margin-bottom: 30px;
+  }
+  /* <----- */
+  .gtco-features svg {
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 100px;
+  }
+  @media (max-width: 767px) {
+    .gtco-features svg {
+      margin: 0 auto;
+      margin-top: 200px;
+    }
+  }
+  /* .gtco-features h2 {
+    margin-top: 200px;
+  } */
+  @media (max-width: 991px) {
+    .gtco-features h2 {
+      margin-top: 0;
+    }
+  }
+  .gtco-features .col-lg-4 p {
+    max-width: 320px;
+    margin-bottom: 30px;
+  }
+  .gtco-features .col-lg-8 {
+    padding: 10px 100px;
+  }
+  @media (max-width: 767px) {
+    .gtco-features .col-lg-8 {
+      padding: 10px 0;
+    }
+  }
+  .gtco-features .col-lg-8 .row .col:first-child {
+    margin-top: 150px;
+  }
+  @media (max-width: 600px) {
+    .gtco-features .col-lg-8 .row .col:first-child {
+      margin-top: 50px;
+    }
+  }
+  @media (max-width: 600px) {
+    .gtco-features .col-lg-8 .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  .gtco-features .col-lg-8 .card {
+    background: #fff;
+    margin: 30px 5px;
+    padding: 20px 10px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 15px #9e8f8f, -5px -5px 17px transparent;
+    transform: translatey(0px);
+	  animation: float 6s ease-in-out infinite;
 
 
+    /* background: linear-gradient(to right, #85dc85,#b03cb88f ); */
+  }
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+  .gtco-features .col-lg-8 .card .oval {
+    background: linear-gradient(to right, #f1f6fd, #f0fbfe);
+    padding: 10px;
+    width: 150px;
+    border-radius: 50%;
+    margin: auto;
+    transform: rotate(20deg);
+    margin-top: 20px;
+  }
+  .gtco-features .col-lg-8 .card .card-img-top {
+    max-width: 0.8in;
+    margin: 0 auto;
+    transform: rotate(-20deg);
+  }
+  .gtco-features .col-lg-8 .card h3 {
+    font-family: "Lato-Regular";
+    font-size: 24px;
+    color: #1d3ede;
+  }
+  .gtco-features .col-lg-8 .card p {
+    font-size: 16px;
+  }
 
-  
 
 
 
@@ -361,7 +550,7 @@ Features Small Start  3 cards
 
   .mini {
     padding: 60px 0;
-    background-image: url('/images/bg.webp');
+    background-image: url('/images/background-prgp.png');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -397,7 +586,15 @@ Features Small Start  3 cards
   
   .mini .mini-content .info h1 {
     color: #fff;
+    /* border: 2px solid black; */
+    background-color: #f9f3f3;
+    /* text-align: center; */
     font-weight: 500;
+    /* width: 50%; */
+    padding: 10px 0;
+    border-radius: 20px;
+    opacity: 0.7;
+    background-color: #8261ee;
     font-size: 28px;
     letter-spacing: 0.25px;
     margin-bottom: 30px;
@@ -406,7 +603,7 @@ Features Small Start  3 cards
   .mini .mini-content .info p {
     letter-spacing: 1px;
     margin-bottom: 40px;
-    color: #fff;
+    color:black;
     letter-spacing: 0.25px;
     line-height: 26px;
     font-weight: 400;
@@ -626,8 +823,8 @@ Features Small Start  3 cards
  
 
 .testimonials {
-    background: linear-gradient(to bottom, #000428, #004683);
-    animation: background-color 20s;
+    background: linear-gradient(135deg, #fae37d, #881da8, #20668f);
+    animation: background-color 20s infinite;
     min-height: 75vh;
 }
 .allcards{
@@ -643,17 +840,21 @@ Features Small Start  3 cards
 
 @keyframes background-color {
     0% {
-        background: linear-gradient(to bottom, #000428, #004683);
+      background: linear-gradient(-135deg, #fae37d, #881da8, #20668f);
+        /* background: linear-gradient(to bottom, #000428, #004683); */
         
     }
 
     25% {
-        background: linear-gradient(135deg, #1a4223, #5ee95e);
+      background: linear-gradient(-80deg, #fae37d, #881da8, #20668f);
+      /* background: linear-gradient(to bottom, #421a31, #e95ed2); */
+        /* background: linear-gradient(to bottom, #1a4223, #5ee95e); */
         
     }
 
     50% {
-        background: linear-gradient(to bottom, #421a31, #e95ed2);
+      background: linear-gradient(80deg, #fae37d, #881da8, #20668f);
+        /* background: linear-gradient(to bottom, #421a31, #e95ed2); */
         
     }
 
@@ -776,9 +977,13 @@ Features Small Start  3 cards
   box-shadow: 0px 30px 40px -20px var(--grayishBlue);
   padding: 30px;
   margin: 20px;  
+  /* animation: float 6s ease-in-out infinite; */
+}
+.box:hover{
+  animation: float 6s ease-in-out infinite;
 }
 
-img {
+.box img {
   float: right;
 }
 
@@ -979,6 +1184,9 @@ h2 {
 }
 
 form {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
   background: rgba(255, 255, 255, 0.3);
   padding: 3em;
   height: 722px;
@@ -1016,7 +1224,7 @@ form input , form textarea{
   background: transparent;
   width: -webkit-fill-available;
   padding: 1em;
-  margin-bottom: 2em;
+  /* margin-bottom: 2em; */
   border: none;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -1081,12 +1289,13 @@ form:hover {
   background: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 10%;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
   position: absolute;
   transition: all 0.2s ease;
+  animation: float 6s ease-in-out infinite;
 }
 .drop-1 {
   height: 80px;
