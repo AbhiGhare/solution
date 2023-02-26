@@ -12,7 +12,7 @@
     <!-- font-awesome CDN link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Document</title>
+    <title> Brick Sols - Web Template</title>
 
 
 </head>
@@ -32,7 +32,7 @@
                             <li><a href="#home">home</a> </li>
                             <li><a href="#services">services</a> </li>
                             <li><a href="#work-process">about</a> </li>
-                            <li><a href="#blog">news</a> </li>
+                            <li><a href="#blog">Work</a> </li>
                             <li class="contact-button"><span></span><a href="#contactUs">contact</a> </li>
                         </ul>
                         <!-- <div class="btn">
@@ -48,7 +48,7 @@
                             <li><a href="#home">home</a> </li>
                             <li><a href="#services">services</a> </li>
                             <li><a href="#work-process">about</a> </li>
-                            <li><a href="#blog">news</a> </li>
+                            <li><a href="#blog">Work</a> </li>
                             <li><a href="#contactUs">contact</a> </li>
                             <!-- <li><a href="#" class="action_btn">Login</a></li>
                             <li><a href="#" class="action_btn">Sign up</a></li> -->
@@ -88,10 +88,11 @@
             <div class="row">
                 <div class="col-md-6 left-side">
                     <h1> We promise to bring
-                        the best <span>Solution</span> for
+                        the best <span>Solutions</span> for
                         your business. </h1>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus turpis nisl. </p>
-                    <div href="#" class="button">Contact Us <i class="fa fa-angle-right" aria-hidden="true"></i></div></div>
+                    
+                    <div href="#" class="button" >Contact Us <i class="fa fa-angle-right" aria-hidden="true"></i></div></div>
                 <div class="col-md-6 right-side ">
                     <div class="card"><img class="card-img-top img-fluid img" src="images/banner-img.png" alt=""></div>
                     <!-- <div class="card"><img class="card-img-top img-fluid img" src="images/uy789ytg.gif" alt=""></div> -->
@@ -354,35 +355,63 @@
      <section class="counter">
         <div class="content">
             <div class="container">
-                <div class="row">
+                <div class="row row-counter">
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-bottom">
-                            <strong>126</strong>
-                            <span>Projects</span>
+                            <span class="strong-span">
+                                <strong class="number">126</strong>
+                                <span>Projects</span>
+                            </span>
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-top">
-                            <strong>63</strong>
-                            <span>Happy Clients</span>
+                            <span class="strong-span" style="padding: 36px 20px;">
+                                <strong class="number">63</strong>
+                                <span>Happy Clients</span>
+                            </span>
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-bottom">
-                            <strong>18</strong>
-                            <span>Awards Wins</span>
+                            <span class="strong-span" style="padding: 35px 28px;">
+                                <strong class="number">18</strong>
+                                <span>Awards Wins</span>
+                            </span>
+                           
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item">
-                            <strong>27</strong>
-                            <span>Countries</span>
+                            <span class="strong-span">
+                                <strong class="number">27</strong>
+                                <span>Countries</span>
+                            </span>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('.number').each(function(){
+                $(this).prop('counter',0).animate({
+                    counter : $(this).text()
+                },{
+                      duration:999,
+                      easing: 'swing',
+                      step : function(now){
+                        $(this).text(Math.ceil(now)+ '+');
+                      }
+                })
+            });
+        });
+    </script>
    <!-- ----------------------------------------
            end  counter section
     ----------------------------------------------->
@@ -481,30 +510,26 @@
     
         <div class="box box-down blue">
           <h2>Affordable Pricing</h2>
-          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum
-            fermentum ac eu eros. Aliquam erat volutpat.</p>
+          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum</p>
           <img src="images/affordable-pricing.png" alt="">
         </div>
     </div>
     <div class="row1-container " style="margin-bottom: 201px;">
         <div class="box box-down cyan">
           <h2>Easy To Use</h2>
-          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum
-            fermentum ac eu eros. Aliquam erat volutpat.</p>
+          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum</p>
           <img src="images/easy-to-use.png" alt="">
         </div>
     
         <div class="box red">
           <h2>Free Support</h2>
-          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum
-            fermentum ac eu eros. Aliquam erat volutpat.</p>
+          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum</p>
           <img src="images/free-support.png" alt="">
         </div>
     
         <div class="box box-down blue">
           <h2>Effectively Increase</h2>
-          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum
-            fermentum ac eu eros. Aliquam erat volutpat.</p>
+          <p>Aliquam a nisl pulvinar, hendrerit arcu sed, dapibus velit. Duis ac quam id sapien vestibulum</p>
           <img src="images/effectively-increase.png" alt="">
         </div>
     </div>
