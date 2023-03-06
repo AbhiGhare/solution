@@ -38,8 +38,8 @@
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: transparent;
-  /* background: linear-gradient(to right, #85dc85,#F9A602 ); */
+  /* background-color: transparent; */
+  background: linear-gradient(to right, #85dc85,#F9A602 );
   /* animation: navbar-background 20s; */
   padding: 10px;
   margin-top: 5px;
@@ -95,6 +95,22 @@ nav .links {
   display: flex;
   gap: 2rem;
   align-items: center;
+}
+nav .links li{
+  transition: 0.9s;
+
+}
+nav .links li:hover{
+  background: linear-gradient(to right, #85dc85,#F9A602 );
+  padding: 3px;
+  transition: 0.9s;
+  border-radius: 5px;
+
+}
+nav .links a:hover{
+  color: black;
+  transition: 0.9s;
+
 }
 
 li {
@@ -666,6 +682,10 @@ Features Small Start  3 cards
   padding: 10px 100px;
 }
 
+.testimonials{
+  display: none;
+}
+
 @media (max-width: 767px) {
   .gtco-features .col-lg-8 {
     padding: 10px 0;
@@ -960,9 +980,9 @@ Features Small Start  3 cards
 }
 
 .strong-span{
-  border: 1px solid;
+  /* border: 1px solid; */
   padding: 30px 40px;
-  border-radius: 50%;
+  border-radius: 30px;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -1543,6 +1563,36 @@ form input[type=button]:active {
 
 form:hover {
   margin: 4px;
+}
+.contact-ions{
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.contact-ions .icon{
+  color: #9d5bd9;
+  text-align: center;
+  /* background-color: #fff; */
+  background: transparent;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgb(0 0 0 / 20%);
+}
+.contact-ions .icon i{
+  color: white;
 }
 
 ::-moz-placeholder {
